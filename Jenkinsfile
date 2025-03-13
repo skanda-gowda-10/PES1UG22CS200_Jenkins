@@ -6,12 +6,12 @@ pipeline {
                 checkout([$class: 'GitSCM',
                           branches: [[name: '*/main']],
                           userRemoteConfigs: [[url: 'https://github.com/skanda-gowda-10/PES1UG22CS200_Jenkins.git']]])
-            } // <- This was missing!  VERY IMPORTANT.
-        } // <- and this one
+            } 
+        } 
 
         stage('Build') {
             steps {
-                sh 'g++ -o PES1UG22CS200-1 main.cpp' // Compiles C++ file
+                sh 'g++ -o PES1UG22CS200-1 maa.cpp' // Compiles C++ file
             }
         }
 
